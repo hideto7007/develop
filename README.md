@@ -5,13 +5,13 @@
 - docker command
 ```
 docker build -t develop .
-winpty docker container run -it -v C:\\Users\\81805\\share\\develop:/develop --name develop develop
+docker container run -it -v C:\\Users\\81805\\share\\develop:/develop --name develop develop
 ```
 
 - コンテナに入るには
 ```
 - docker start develop
-- winpty docker container exec -it develop /bin/bash
+- docker container exec -it develop /bin/bash
 ```
 
 - git bashを使わずにcmdからコンテナに入る
