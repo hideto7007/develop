@@ -9,6 +9,10 @@
 #define NDEBUG
 
 #include "object/object_orientation_sample.cpp"
+#include "object/Factory.h"
+#include "object/Product.h"
+#include "object/IDCardFactory.h"
+#include "object/IDCard.h"
 
 // #define TEST_CASE(a, b) (test_case_macro(a, b))
 
@@ -91,6 +95,15 @@ int main(void) {
 	std::shared_ptr<Color> color = std::make_shared<Color>();
 	color->print("red");
 	color->print("green", "blue");
+
+
+	Factory *factory = new IDCardFactory();
+	Product *crad1 = factory->create("たなか");
+	// Product *crad2 = factory->create("しみず");
+	// Product *crad3 = factory->create("かたせ");
+	// crad1->use();
+	// crad2->use();
+	// crad3->use();
 
 
 

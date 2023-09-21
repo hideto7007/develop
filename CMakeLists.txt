@@ -11,13 +11,19 @@ project(develop)
 add_executable(exec main/main.cpp)
 
 # objectディレクトリ内のsample.cppをビルド対象に追加
-add_library(object_orientation_sample OBJECT main/object/object_orientation_sample.cpp)
+add_library(lib OBJECT 
+            main/object/object_orientation_sample.cpp
+            main/object/product.cpp
+            main/object/iDCard.cpp
+            main/object/IDCardFactory.cpp)
 
 # インクルードディレクトリを設定
-target_include_directories(object_orientation_sample PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/object)
+target_include_directories(lib PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}/object
+    )
 
 # メインプログラムとライブラリをリンク
-target_link_libraries(exec object_orientation_sample)
+target_link_libraries(exec lib)
 
 
 # buildディレクトリ配下のexecファイルで実行できる
