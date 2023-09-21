@@ -17,6 +17,13 @@ add_library(lib OBJECT
             main/object/iDCard.cpp
             main/object/IDCardFactory.cpp)
 
+add_subdirectory(src/common)
+add_subdirectory(src/core)
+add_subdirectory(src/runtime)
+add_subdirectory(src/test)
+add_subdirectory(src/utils)
+
+
 # インクルードディレクトリを設定
 target_include_directories(lib PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/object
