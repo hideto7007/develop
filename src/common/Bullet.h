@@ -1,13 +1,20 @@
-#ifndef Bullet_H
-#define Bullet_H
+#ifndef BULLET_H
+#define BULLET_H
 
-#include <iostream>
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
 
-class Bullet{
-    public:
-        Bullet(const std::string& str) : mStr(str) {};
-
-    private:
-        std::string mStr;
+class Bullet {
+public:
+    Bullet(int startX, int startY); // コンストラクタ
+    void update();
+    void render();
+    bool IsOutOfBound() const;
+    
+private:
+    int x, y; // 弾丸の座標
+    int speed; // 弾丸の速度
+    bool active; // 弾丸が有効かどうかを示すフラグ
 };
-#endif // Bullet_H
+
+#endif // BULLET_H

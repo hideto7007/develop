@@ -1,13 +1,27 @@
-#ifndef GameController_H
-#define GameController_H
+#ifndef GAMECONTROLLER_H
+#define GAMECONTROLLER_H
 
-#include <iostream>
+#include <vector>
 
-class GameController{
-    public:
-        GameController(const std::string& str) : mStr(str) {};
+#include "Player.h"
+#include "Enemy.h"
+#include "Obstacle.h"
+#include "Bullet.h"
 
-    private:
-        std::string mStr;
+class GameController {
+public:
+    GameController();
+    void initialize();
+    void run();
+    void shutdown();
+
+private:
+    Player player;
+    Enemy enemy;
+    Obstacle obstacle;
+    std::vector<Bullet> bullets;
+
+    // 他のプライベートメンバー変数や関数を追加
 };
-#endif // GameController_H
+
+#endif // GAMECONTROLLER_H

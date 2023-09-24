@@ -1,5 +1,7 @@
 add_library(core 
-            sample.cpp)
+            sample.cpp
+            GameController.cpp
+            Graphics.cpp)
 
 
 target_link_libraries(core utils common)

@@ -1,13 +1,20 @@
-#ifndef Graphics_H
-#define Graphics_H
+#ifndef GRAPHICS_H
+#define GRAPHICS_H
 
-#include <iostream>
+#include <SFML/Graphics.hpp>
 
-class Graphics{
-    public:
-        Graphics(const std::string& str) : mStr(str) {};
+class Graphics {
+public:
+    Graphics(int screenWidth, int screenHeight, const std::string& windowTitle);
+    ~Graphics();
 
-    private:
-        std::string mStr;
+    void clear();
+    void display();
+    bool isOpen() const;
+    sf::RenderWindow& GetRenderWindow();
+
+private:
+    sf::RenderWindow window;
 };
-#endif // Graphics_H
+
+#endif // GRAPHICS_H

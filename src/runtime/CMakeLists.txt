@@ -1,5 +1,6 @@
 add_library(runtime 
-            sample.cpp)
+            sample.cpp
+            input.cpp)
 
 
 add_executable(runtime_exec ./main.cpp)  # ターゲット名をruntime_execに変更

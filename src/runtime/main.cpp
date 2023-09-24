@@ -8,7 +8,7 @@
 #include <variant>
 #define NDEBUG
 
-#include "sample.h"
+#include "/src/common/Game.h"
 
 int main() {
 

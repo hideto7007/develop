@@ -1,13 +1,19 @@
-#ifndef Player_H
-#define Player_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
-#include <iostream>
+class Player {
+public:
+    Player(); // コンストラクタ
+    void initialize();
+    void update();
+    void render();
+    bool gameover();
+    // 他のメンバー関数や変数を追加
 
-class Player{
-    public:
-        Player(const std::string& str) : mStr(str) {};
-
-    private:
-        std::string mStr;
+protected:
+    int x, y; // プレイヤーの座標
+    int health; // プレイヤーの体力
+    // 他のプレイヤー固有の変数を追加
 };
-#endif // Player_H
+
+#endif // PLAYER_H
