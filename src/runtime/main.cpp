@@ -8,12 +8,10 @@
 #include <variant>
 #define NDEBUG
 
-#include "/src/common/Game.h"
+#include "Game.h"
+#include "Graphics.h"
 
 int main() {
-
-    std::shared_ptr<Sample> sample = std::make_shared<Sample>();
-    sample->sample("hoge");
 
     return 0;
 }
