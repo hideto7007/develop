@@ -1,6 +1,7 @@
 
 add_library(common 
-            sample.cpp)
+            sample.cpp
+            Game.cpp)
 
 
 target_link_libraries(common utils core runtime)

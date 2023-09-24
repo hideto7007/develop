@@ -7,9 +7,12 @@
 
 class Game{
     public:
-        Game(const std::string& str) : mStr(str) {};
+        void initialize();
+        void run();
 
     private:
-        std::string mStr;
+        void update(int &score);
+        void render(int score);
+        bool gameover();
 };
 #endif // GAME_H
